@@ -108,8 +108,13 @@ class MainActivity : AppCompatActivity() {
 
         initClickListeners()
         initObservers(viewModel)
-        viewModel.getAppList()
         setupOrientation()
+        
+        // Lazy load app list after UI is shown
+        lifecycleScope.launch {
+            delay(100) // Let UI render first
+            viewModel.getAppList()
+        }
 
         window.addFlags(FLAG_LAYOUT_NO_LIMITS)
 

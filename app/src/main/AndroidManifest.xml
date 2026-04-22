@@ -27,11 +27,12 @@
         android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:name=".VodouLauncherApp"
+        android:theme="@style/Theme.VodouLauncher.Glass"
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name=".com.vodoulacroix.launcher.MainActivity"
+            android:name=".OptimizedMainActivity"
             android:configChanges="uiMode"
             android:excludeFromRecents="true"
             android:exported="true"

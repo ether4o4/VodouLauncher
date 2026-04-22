@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Futuristic Glass Theme Colors -->
+    
+    <!-- Base Glass Colors -->
+    <color name="glass_dark_surface">#1A1F2A</color>
+    <color name="glass_dark_surface_translucent">#CC1A1F2A</color>
+    <color name="glass_dark_surface_semi">#801A1F2A</color>
+    <color name="glass_dark_surface_light">#331A1F2A</color>
+    
+    <color name="glass_light_surface">#F0F4F8</color>
+    <color name="glass_light_surface_translucent">#CCF0F4F8</color>
+    <color name="glass_light_surface_semi">#80F0F4F8</color>
+    
+    <!-- Glass Effects -->
+    <color name="glass_highlight">#40FFFFFF</color>
+    <color name="glass_shadow">#20000000</color>
+    <color name="glass_reflection">#30FFFFFF</color>
+    <color name="glass_glow_inner">#15FFFFFF</color>
+    <color name="glass_glow_outer">#08000000</color>
+    
+    <!-- Futuristic Accents -->
+    <color name="futuristic_cyan">#00D4FF</color>
+    <color name="futuristic_cyan_glow">#4000D4FF</color>
+    <color name="futuristic_cyan_light">#80B4F0FF</color>
+    <color name="futuristic_cyan_dark">#0080A0</color>
+    
+    <color name="futuristic_purple">#B388FF</color>
+    <color name="futuristic_purple_glow">#40B388FF</color>
+    
+    <color name="futuristic_teal">#64FFDA</color>
+    <color name="futuristic_teal_glow">#4064FFDA</color>
+    
+    <!-- Glass Overlays -->
+    <color name="glass_overlay_dark">#801A1F2A</color>
+    <color name="glass_overlay_light">#80F0F4F8</color>
+    <color name="glass_overlay_cyan">#2000D4FF</color>
+    
+    <!-- Text on Glass -->
+    <color name="text_on_glass_dark">#E6FFFFFF</color>
+    <color name="text_on_glass_light">#E6000000</color>
+    <color name="text_on_glass_cyan">#FF00D4FF</color>
+    
+    <!-- Icons on Glass -->
+    <color name="icon_on_glass_dark">#CCFFFFFF</color>
+    <color name="icon_on_glass_light">#CC000000</color>
+    <color name="icon_on_glass_accent">#FF00D4FF</color>
+    
+    <!-- Glass Borders -->
+    <color name="glass_border_dark">#40FFFFFF</color>
+    <color name="glass_border_light">#40000000</color>
+    <color name="glass_border_glow">#8000D4FF</color>
+    
+    <!-- Glass Backgrounds with Blur Effect -->
+    <color name="glass_background_dark">#801A1F2A</color>
+    <color name="glass_background_light">#80F0F4F8</color>
+    <color name="glass_background_cyan">#2000D4FF</color>
+    
+    <!-- Glass Button States -->
+    <color name="glass_button_normal">#331A1F2A</color>
+    <color name="glass_button_pressed">#661A1F2A</color>
+    <color name="glass_button_hover">#4D1A1F2A</color>
+    
+    <!-- Glass Card Colors -->
+    <color name="glass_card_dark">#CC1A1F2A</color>
+    <color name="glass_card_light">#CCF0F4F8</color>
+    <color name="glass_card_accent">#8000D4FF</color>
+    
+    <!-- Glass Notification Colors -->
+    <color name="glass_notification">#CC1A1F2A</color>
+    <color name="glass_notification_accent">#4000D4FF</color>
+    
+    <!-- Glass System Colors -->
+    <color name="glass_system_dark">#1A1F2A</color>
+    <color name="glass_system_light">#F0F4F8</color>
+    
+    <!-- Glass Transparency Levels -->
+    <color name="glass_transparent_10">#1A1A1F2A</color>
+    <color name="glass_transparent_20">#331A1F2A</color>
+    <color name="glass_transparent_30">#4D1A1F2A</color>
+    <color name="glass_transparent_40">#661A1F2A</color>
+    <color name="glass_transparent_50">#801A1F2A</color>
+    <color name="glass_transparent_60">#991A1F2A</color>
+    <color name="glass_transparent_70">#B31A1F2A</color>
+    <color name="glass_transparent_80">#CC1A1F2A</color>
+    <color name="glass_transparent_90">#E61A1F2A</color>
+    
+    <!-- Glass Gradient Colors -->
+    <color name="glass_gradient_start">#001A1F2A</color>
+    <color name="glass_gradient_middle">#801A1F2A</color>
+    <color name="glass_gradient_end">#FF1A1F2A</color>
+    
+    <color name="glass_gradient_cyan_start">#0000D4FF</color>
+    <color name="glass_gradient_cyan_end">#FF00D4FF</color>
+    
+    <!-- Glass Shadow Effects -->
+    <color name="glass_shadow_soft">#0A000000</color>
+    <color name="glass_shadow_medium">#20000000</color>
+    <color name="glass_shadow_strong">#40000000</color>
+    
+    <!-- Glass Highlight Effects -->
+    <color name="glass_highlight_soft">#0AFFFFFF</color>
+    <color name="glass_highlight_medium">#20FFFFFF</color>
+    <color name="glass_highlight_strong">#40FFFFFF</color>
+    
+    <!-- Glass Reflection Effects -->
+    <color name="glass_reflection_top">#30FFFFFF</color>
+    <color name="glass_reflection_bottom">#10FFFFFF</color>
+    
+    <!-- Glass Ambient Colors -->
+    <color name="glass_ambient_dark">#0D1A1F2A</color>
+    <color name="glass_ambient_light">#0DF0F4F8</color>
+    
+    <!-- Glass Focus States -->
+    <color name="glass_focus_ring">#8000D4FF</color>
+    <color name="glass_focus_glow">#4000D4FF</color>
+    
+    <!-- Glass Disabled States -->
+    <color name="glass_disabled">#331A1F2A</color>
+    <color name="glass_disabled_text">#66FFFFFF</color>
+    
+    <!-- Glass Success/Error States -->
+    <color name="glass_success">#804CAF50</color>
+    <color name="glass_error">#80F44336</color>
+    <color name="glass_warning">#80FF9800</color>
+    <color name="glass_info">#802196F3</color>
+</resources>

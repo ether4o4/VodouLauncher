@@ -1,0 +1,152 @@
+// Performance optimization configuration for VodouLauncher
+
+android {
+    // Enable performance optimizations
+    buildFeatures {
+        compose = false  // Disable Jetpack Compose for now (reduces APK size)
+        viewBinding = true
+        dataBinding = false  // DataBinding is heavier than ViewBinding
+    }
+    
+    // Enable R8 full mode for better code shrinking
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Enable code optimization
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            renderscriptOptimLevel 3
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            // Debug optimizations
+            debuggable true
+            testCoverageEnabled false
+        }
+    }
+    
+    // Enable split APKs for different screen densities and ABIs
+    splits {
+        density {
+            enable true
+            exclude "ldpi", "tvdpi"
+            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+        }
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+            universalApk true
+        }
+    }
+    
+    // Bundle configuration for Play Store
+    bundle {
+        density {
+            enableSplit true
+        }
+        abi {
+            enableSplit true
+        }
+        language {
+            enableSplit true
+        }
+    }
+    
+    // Compile options for performance
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        // Enable desugaring for Java 8+ features
+        coreLibraryDesugaringEnabled true
+    }
+    
+    kotlinOptions {
+        jvmTarget = '17'
+        // Enable Kotlin performance optimizations
+        freeCompilerArgs += [
+            '-Xopt-in=kotlin.RequiresOptIn',
+            '-Xinline-classes',
+            '-Xno-param-assertions',
+            '-Xno-call-assertions',
+            '-Xno-receiver-assertions'
+        ]
+    }
+    
+    // Packaging options to reduce APK size
+    packagingOptions {
+        resources {
+            excludes += [
+                'META-INF/DEPENDENCIES',
+                'META-INF/LICENSE',
+                'META-INF/LICENSE.txt',
+                'META-INF/license.txt',
+                'META-INF/NOTICE',
+                'META-INF/NOTICE.txt',
+                'META-INF/notice.txt',
+                'META-INF/ASL2.0',
+                'META-INF/*.kotlin_module',
+                'META-INF/AL2.0',
+                'META-INF/LGPL2.1',
+                '**/*.proto'
+            ]
+            pickFirsts += [
+                'lib/armeabi-v7a/libc++_shared.so',
+                'lib/arm64-v8a/libc++_shared.so',
+                'lib/x86/libc++_shared.so',
+                'lib/x86_64/libc++_shared.so'
+            ]
+        }
+    }
+}
+
+dependencies {
+    // Core library desugaring for Java 8+ APIs on older Android versions
+    coreLibraryDesugaring libs.desugar.jdk.libs
+    
+    // Performance monitoring
+    debugImplementation libs.leakcanary.android  // Memory leak detection
+    implementation libs.timber  // Better logging
+    
+    // Image loading optimization
+    implementation libs.coil.kt  // Modern image loading (faster than Glide/Picasso)
+    implementation libs.coil.svg
+    
+    // Network optimization
+    implementation libs.okhttp
+    implementation libs.okhttp.logging.interceptor
+    implementation libs.retrofit
+    implementation libs.retrofit.converter.gson
+    
+    // Async processing
+    implementation libs.coroutines.android
+    implementation libs.coroutines.core
+    
+    // Memory/performance monitoring in debug builds
+    debugImplementation libs.androidx.benchmark.macro.junit4
+}
+
+// Task to generate performance report
+task performanceReport(type: Exec) {
+    commandLine './gradlew', 'assembleRelease', '--profile'
+    doLast {
+        println "Performance report generated. Check build/reports/profile/"
+    }
+}
+
+// Task to analyze APK size
+task analyzeApk(type: Exec) {
+    commandLine './gradlew', 'assembleRelease', '--dry-run'
+    doLast {
+        println "APK analysis complete. Use Android Studio's APK Analyzer for details."
+    }
+}
+
+// Configure for faster builds
+project.gradle.startParameter.configureOnDemand = true
