@@ -31,7 +31,7 @@
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".com.vodoulacroix.launcher.MainActivity"
             android:configChanges="uiMode"
             android:excludeFromRecents="true"
             android:exported="true"
@@ -48,7 +48,7 @@
         </activity>
 
         <activity
-            android:name=".helper.PinItemActivity"
+            android:name=".com.vodoulacroix.launcher.helper.PinItemActivity"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
@@ -62,7 +62,7 @@
         </activity>
 
         <activity
-            android:name=".helper.FakeHomeActivity"
+            android:name=".com.vodoulacroix.launcher.helper.FakeHomeActivity"
             android:enabled="false"
             android:exported="false"
             android:launchMode="singleTask"
@@ -77,7 +77,7 @@
         </activity>
 
         <receiver
-            android:name=".listener.DeviceAdmin"
+            android:name=".com.vodoulacroix.launcher.listener.DeviceAdmin"
             android:exported="false"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
@@ -89,7 +89,7 @@
         </receiver>
 
         <service
-            android:name=".helper.MyAccessibilityService"
+            android:name=".com.vodoulacroix.launcher.helper.MyAccessibilityService"
             android:exported="false"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
