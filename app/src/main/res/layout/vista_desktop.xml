@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="8dp"
+    tools:context=".OptimizedMainActivity">
+
+    <!-- Vista Desktop Background (Glass Wallpaper Effect) -->
+    <View
+        android:id="@+id/vista_desktop_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/vista_desktop_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Vista Desktop Icons Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vista_desktop_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="none"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/vista_taskbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="4"
+        tools:itemCount="16"
+        tools:listitem="@layout/vista_desktop_icon" />
+
+    <!-- Vista Taskbar (Bottom Bar) -->
+    <LinearLayout
+        android:id="@+id/vista_taskbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/vista_taskbar_background"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Start Button -->
+        <ImageButton
+            android:id="@+id/vista_start_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/vista_start_button"
+            android:contentDescription="@string/start_menu"
+            android:scaleType="center"
+            android:src="@drawable/ic_vista_start" />
+
+        <!-- Taskbar Apps -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vista_taskbar_apps"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="6"
+            tools:listitem="@layout/vista_taskbar_app" />
+
+        <!-- System Tray -->
+        <LinearLayout
+            android:id="@+id/vista_system_tray"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <!-- Clock -->
+            <TextView
+                android:id="@+id/vista_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="14:30"
+                android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Clock"
+                android:textColor="@color/vista_text_primary" />
+
+            <!-- Battery -->
+            <ImageView
+                android:id="@+id/vista_battery"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_vista_battery_full"
+                android:tint="@color/vista_icon_primary" />
+
+            <!-- WiFi -->
+            <ImageView
+                android:id="@+id/vista_wifi"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_vista_wifi_full"
+                android:tint="@color/vista_icon_primary" />
+
+            <!-- Volume -->
+            <ImageView
+                android:id="@+id/vista_volume"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_vista_volume_high"
+                android:tint="@color/vista_icon_primary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Vista Start Menu (Hidden by default) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vista_start_menu"
+        android:layout_width="320dp"
+        android:layout_height="480dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/vista_start_menu"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/vista_taskbar"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Start Menu Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/vista_start_header"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_vista_logo"
+                    android:tint="@color/vista_icon_primary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Title"
+                    android:textColor="@color/vista_text_primary" />
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/vista_icon_button"
+                    android:src="@drawable/ic_vista_power"
+                    android:tint="@color/vista_icon_primary" />
+            </LinearLayout>
+
+            <!-- Start Menu Content -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vista_start_menu_apps"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:padding="8dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="12"
+                tools:listitem="@layout/vista_start_menu_item" />
+
+            <!-- Start Menu Footer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/vista_start_footer"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/vista_icon_button"
+                    android:src="@drawable/ic_vista_user"
+                    android:tint="@color/vista_icon_primary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="VodouLaCroix"
+                    android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Subtitle"
+                    android:textColor="@color/vista_text_secondary" />
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/vista_icon_button"
+                    android:src="@drawable/ic_vista_settings"
+                    android:tint="@color/vista_icon_primary" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Vista Notification Center (Hidden by default) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vista_notification_center"
+        android:layout_width="280dp"
+        android:layout_height="320dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/vista_notification"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/vista_taskbar"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Notification Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Notifications"
+                android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Title"
+                android:textColor="@color/vista_text_primary" />
+
+            <!-- Notifications List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vista_notifications_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:padding="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/vista_notification_item" />
+
+            <!-- Quick Settings -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vista_quick_setting"
+                    android:src="@drawable/ic_vista_wifi"
+                    android:tint="@color/vista_icon_primary" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vista_quick_setting"
+                    android:src="@drawable/ic_vista_bluetooth"
+                    android:tint="@color/vista_icon_primary" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vista_quick_setting"
+                    android:src="@drawable/ic_vista_flashlight"
+                    android:tint="@color/vista_icon_primary" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vista_quick_setting"
+                    android:src="@drawable/ic_vista_settings"
+                    android:tint="@color/vista_icon_primary" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Vista Search Bar (Floating) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vista_search_bar"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/vista_surface_dark"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_vista_search"
+                android:tint="@color/vista_icon_primary" />
+
+            <EditText
+                android:id="@+id/vista_search_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search apps, files, settings..."
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Body"
+                android:textColor="@color/vista_text_primary"
+                android:textColorHint="@color/vista_text_secondary" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

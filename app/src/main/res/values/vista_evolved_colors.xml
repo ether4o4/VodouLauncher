@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Vista Evolved - Futuristic Glass Theme Colors -->
+    <!-- Base Vista-inspired colors but evolved for modern HD displays -->
+    
+    <!-- Vista Blue Evolution -->
+    <color name="vista_evolved_blue">#0078D7</color>
+    <color name="vista_evolved_blue_light">#4CAFED</color>
+    <color name="vista_evolved_blue_dark">#005A9E</color>
+    <color name="vista_evolved_blue_glass">#800078D7</color>
+    <color name="vista_evolved_blue_glow">#400078D7</color>
+    
+    <!-- Vista Silver Evolution -->
+    <color name="vista_evolved_silver">#E6E6E6</color>
+    <color name="vista_evolved_silver_light">#F5F5F5</color>
+    <color name="vista_evolved_silver_dark">#CCCCCC</color>
+    <color name="vista_evolved_silver_glass">#80E6E6E6</color>
+    
+    <!-- Vista Black Evolution -->
+    <color name="vista_evolved_black">#1A1A1A</color>
+    <color name="vista_evolved_black_light">#333333</color>
+    <color name="vista_evolved_black_dark">#0D0D0D</color>
+    <color name="vista_evolved_black_glass">#801A1A1A</color>
+    
+    <!-- Vista Glass Effects (Evolved) -->
+    <color name="vista_glass_clear">#20FFFFFF</color>
+    <color name="vista_glass_frosted">#40FFFFFF</color>
+    <color name="vista_glass_reflective">#60FFFFFF</color>
+    <color name="vista_glass_tinted">#300078D7</color>
+    
+    <!-- Vista Glow Effects (Modernized) -->
+    <color name="vista_glow_inner">#15FFFFFF</color>
+    <color name="vista_glow_outer">#08000000</color>
+    <color name="vista_glow_blue">#200078D7</color>
+    <color name="vista_glow_silver">#20E6E6E6</color>
+    
+    <!-- Vista Reflections (HD Enhanced) -->
+    <color name="vista_reflection_top">#30FFFFFF</color>
+    <color name="vista_reflection_middle">#15FFFFFF</color>
+    <color name="vista_reflection_bottom">#08FFFFFF</color>
+    
+    <!-- Vista Shadows (Smoother) -->
+    <color name="vista_shadow_soft">#0A000000</color>
+    <color name="vista_shadow_medium">#20000000</color>
+    <color name="vista_shadow_strong">#40000000</color>
+    <color name="vista_shadow_blue">#200078D7</color>
+    
+    <!-- Vista Accents (Modernized) -->
+    <color name="vista_accent_green">#4CAF50</color>
+    <color name="vista_accent_orange">#FF9800</color>
+    <color name="vista_accent_red">#F44336</color>
+    <color name="vista_accent_purple">#9C27B0</color>
+    
+    <!-- Vista Text Colors (HD Optimized) -->
+    <color name="vista_text_primary">#E6FFFFFF</color>
+    <color name="vista_text_secondary">#B3FFFFFF</color>
+    <color name="vista_text_disabled">#66FFFFFF</color>
+    <color name="vista_text_accent">#FF4CAFED</color>
+    
+    <!-- Vista Icon Colors -->
+    <color name="vista_icon_primary">#CCFFFFFF</color>
+    <color name="vista_icon_secondary">#80FFFFFF</color>
+    <color name="vista_icon_accent">#FF0078D7</color>
+    
+    <!-- Vista Surface Colors -->
+    <color name="vista_surface_dark">#801A1A1A</color>
+    <color name="vista_surface_light">#80E6E6E6</color>
+    <color name="vista_surface_blue">#400078D7</color>
+    
+    <!-- Vista Border Colors -->
+    <color name="vista_border_light">#40FFFFFF</color>
+    <color name="vista_border_dark">#40000000</color>
+    <color name="vista_border_glow">#800078D7</color>
+    
+    <!-- Vista Button States -->
+    <color name="vista_button_normal">#331A1A1A</color>
+    <color name="vista_button_hover">#4D1A1A1A</color>
+    <color name="vista_button_pressed">#661A1A1A</color>
+    <color name="vista_button_focused">#800078D7</color>
+    
+    <!-- Vista Card Colors -->
+    <color name="vista_card_dark">#CC1A1A1A</color>
+    <color name="vista_card_light">#CCE6E6E6</color>
+    <color name="vista_card_blue">#800078D7</color>
+    
+    <!-- Vista Window Colors -->
+    <color name="vista_window_titlebar">#801A1A1A</color>
+    <color name="vista_window_content">#80000000</color>
+    <color name="vista_window_border">#40FFFFFF</color>
+    
+    <!-- Vista Taskbar Colors -->
+    <color name="vista_taskbar">#801A1A1A</color>
+    <color name="vista_taskbar_hover">#4D1A1A1A</color>
+    <color name="vista_taskbar_active">#800078D7</color>
+    
+    <!-- Vista Start Menu Colors -->
+    <color name="vista_start_menu">#801A1A1A</color>
+    <color name="vista_start_menu_item">#331A1A1A</color>
+    <color name="vista_start_menu_item_hover">#4D1A1A1A</color>
+    
+    <!-- Vista Transparency Levels (HD Optimized) -->
+    <color name="vista_transparent_05">#0D1A1A1A</color>
+    <color name="vista_transparent_10">#1A1A1A1A</color>
+    <color name="vista_transparent_20">#331A1A1A</color>
+    <color name="vista_transparent_30">#4D1A1A1A</color>
+    <color name="vista_transparent_40">#661A1A1A</color>
+    <color name="vista_transparent_50">#801A1A1A</color>
+    <color name="vista_transparent_60">#991A1A1A</color>
+    <color name="vista_transparent_70">#B31A1A1A</color>
+    <color name="vista_transparent_80">#CC1A1A1A</color>
+    <color name="vista_transparent_90">#E61A1A1A</color>
+    
+    <!-- Vista Gradient Colors -->
+    <color name="vista_gradient_start">#001A1A1A</color>
+    <color name="vista_gradient_middle">#801A1A1A</color>
+    <color name="vista_gradient_end">#FF1A1A1A</color>
+    
+    <color name="vista_gradient_blue_start">#000078D7</color>
+    <color name="vista_gradient_blue_middle">#800078D7</color>
+    <color name="vista_gradient_blue_end">#FF0078D7</color>
+    
+    <!-- Vista Focus States -->
+    <color name="vista_focus_ring">#800078D7</color>
+    <color name="vista_focus_glow">#400078D7</color>
+    
+    <!-- Vista Disabled States -->
+    <color name="vista_disabled">#331A1A1A</color>
+    <color name="vista_disabled_text">#66FFFFFF</color>
+    <color name="vista_disabled_icon">#66FFFFFF</color>
+    
+    <!-- Vista Success/Error States -->
+    <color name="vista_success">#804CAF50</color>
+    <color name="vista_error">#80F44336</color>
+    <color name="vista_warning">#80FF9800</color>
+    <color name="vista_info">#802196F3</color>
+    
+    <!-- Vista Aero Specific Colors -->
+    <color name="vista_aero_blue">#7F9DB9</color>
+    <color name="vista_aero_glass">#40FFFFFF</color>
+    <color name="vista_aero_reflection">#30FFFFFF</color>
+    <color name="vista_aero_highlight">#20FFFFFF</color>
+    
+    <!-- Vista Modern Evolution Colors -->
+    <color name="vista_modern_cyan">#00BCD4</color>
+    <color name="vista_modern_magenta">#E91E63</color>
+    <color name="vista_modern_teal">#009688</color>
+    <color name="vista_modern_amber">#FFC107</color>
+    
+    <!-- Vista Ultra HD Optimized Colors -->
+    <color name="vista_uhd_white">#FFFFFFFF</color>
+    <color name="vista_uhd_black">#FF000000</color>
+    <color name="vista_uhd_gray">#FF808080</color>
+    <color name="vista_uhd_silver">#FFC0C0C0</color>
+    
+    <!-- Vista Glass Blur Colors -->
+    <color name="vista_blur_background">#40000000</color>
+    <color name="vista_blur_foreground">#20FFFFFF</color>
+    <color name="vista_blur_accent">#200078D7</color>
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed State -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Base pressed color -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_button_pressed"
+                        android:endColor="@color/vista_transparent_60"
+                        android:angle="135" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            
+            <!-- Pressed glow -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_glow_blue"
+                        android:endColor="@android:color/transparent"
+                        android:angle="0"
+                        android:centerX="0.5"
+                        android:centerY="0.5"
+                        android:gradientRadius="50%" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            
+            <!-- Pressed border -->
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/vista_evolved_blue_light" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+    <!-- Focused State -->
+    <item android:state_focused="true">
+        <layer-list>
+            <!-- Base focused color -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_button_focused"
+                        android:endColor="@color/vista_transparent_60"
+                        android:angle="135" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            
+            <!-- Focus ring -->
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/vista_focus_ring" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+    <!-- Hover State (for devices with pointer) -->
+    <item android:state_hovered="true">
+        <layer-list>
+            <!-- Base hover color -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_button_hover"
+                        android:endColor="@color/vista_transparent_60"
+                        android:angle="135" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            
+            <!-- Hover glow -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_glow_blue"
+                        android:endColor="@android:color/transparent"
+                        android:angle="0"
+                        android:centerX="0.5"
+                        android:centerY="0.5"
+                        android:gradientRadius="40%" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+    <!-- Default/Normal State -->
+    <item>
+        <layer-list>
+            <!-- Base glass effect -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_button_normal"
+                        android:endColor="@color/vista_transparent_50"
+                        android:angle="135" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            
+            <!-- Top reflection -->
+            <item
+                android:top="0dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:height="1dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_reflection_top"
+                        android:endColor="@android:color/transparent"
+                        android:angle="90" />
+                    <corners
+                        android:topLeftRadius="24dp"
+                        android:topRightRadius="24dp"
+                        android:bottomLeftRadius="0dp"
+                        android:bottomRightRadius="0dp" />
+                </shape>
+            </item>
+            
+            <!-- Glass border -->
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/vista_border_light" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            
+            <!-- Inner subtle glow -->
+            <item
+                android:top="1dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:bottom="1dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="@color/vista_glow_inner"
+                        android:endColor="@android:color/transparent"
+                        android:angle="0"
+                        android:centerX="0.5"
+                        android:centerY="0.5"
+                        android:gradientRadius="30%" />
+                    <corners android:radius="23dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+    <!-- Disabled State -->
+    <item android:state_enabled="false">
+        <layer-list>
+            <!-- Base disabled color -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/vista_disabled" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            
+            <!-- Disabled border -->
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/vista_border_light" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

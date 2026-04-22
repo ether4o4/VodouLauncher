@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="80dp"
+    android:layout_height="96dp"
+    android:background="@drawable/vista_icon_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="4dp">
+
+    <!-- Icon Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/icon_container"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/vista_icon_background"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Icon Image -->
+        <ImageView
+            android:id="@+id/icon_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            tools:src="@drawable/ic_vista_app_default" />
+
+        <!-- Selection Glow -->
+        <View
+            android:id="@+id/icon_selection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/vista_icon_selection"
+            android:visibility="gone" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Icon Label -->
+    <TextView
+        android:id="@+id/icon_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingTop="4dp"
+        android:text="App Name"
+        android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.IconLabel"
+        android:textColor="@color/vista_text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_container" />
+
+    <!-- Running Indicator -->
+    <View
+        android:id="@+id/running_indicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/vista_running_indicator"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/icon_container"
+        app:layout_constraintTop_toTopOf="@+id/icon_container" />
+
+    <!-- Notification Badge -->
+    <TextView
+        android:id="@+id/notification_badge"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/vista_notification_badge"
+        android:gravity="center"
+        android:text="3"
+        android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Badge"
+        android:textColor="@color/vista_text_primary"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/icon_container"
+        app:layout_constraintTop_toTopOf="@+id/icon_container" />
+
+    <!-- Context Menu Button -->
+    <ImageButton
+        android:id="@+id/context_menu_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/vista_icon_button"
+        android:scaleType="center"
+        android:src="@drawable/ic_vista_context_menu"
+        android:tint="@color/vista_icon_secondary"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/icon_container"
+        app:layout_constraintTop_toTopOf="@+id/icon_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

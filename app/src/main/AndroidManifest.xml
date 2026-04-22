@@ -31,8 +31,9 @@
         android:theme="@style/Theme.VodouLauncher.Glass"
         tools:ignore="UnusedAttribute">
 
+        <!-- Vista Launcher (Default) -->
         <activity
-            android:name=".OptimizedMainActivity"
+            android:name=".VistaLauncherActivity"
             android:configChanges="uiMode"
             android:excludeFromRecents="true"
             android:exported="true"
