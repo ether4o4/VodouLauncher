@@ -1,7 +1,7 @@
-# 📥 VodouLauncher APK - Download Instructions
+# 📥 4GAuteauOS APK - Download Instructions
 
 ## **Option A: Download Pre-built APK (Recommended)**
-**Direct Download Link:** [Click here to download VodouLauncher APK](https://transfer.sh/GET/vodoulauncher-debug.apk)
+**Direct Download Link:** [Click here to download 4GAuteauOS APK](https://transfer.sh/GET/4gauteauos-debug.apk)
 
 **Installation Steps:**
 1. **Download** the APK file to your Android device
@@ -11,7 +11,7 @@
 5. **Set as default** launcher in Android settings
 
 **APK Details:**
-- File: `vodoulauncher-debug.apk`
+- File: `4gauteauos-debug.apk`
 - Version: v6.4.2 (Vista Evolved)
 - Size: ~15-20MB
 - Android: 8.0+ (API 24+)
@@ -26,8 +26,8 @@
 ### **Build Steps:**
 1. **Clone repository:**
    ```bash
-   git clone https://github.com/ether4o4/VodouLauncher.git
-   cd VodouLauncher
+   git clone https://github.com/ether4o4/4GAuteauOS.git
+   cd 4GAuteauOS
    ```
 
 2. **Run build script:**
@@ -38,11 +38,11 @@
 
 3. **Find APK:**
    - Location: `app/build/outputs/apk/debug/app-debug.apk`
-   - Or: `./vodoulauncher-debug.apk` (copied by script)
+   - Or: `./4gauteauos-debug.apk` (copied by script)
 
 ## **Option C: Use GitHub Actions**
 
-1. **Visit:** https://github.com/ether4o4/VodouLauncher/actions
+1. **Visit:** https://github.com/ether4o4/4GAuteauOS/actions
 2. **Click** on latest workflow run
 3. **Download** APK from artifacts section
 
@@ -78,7 +78,7 @@
 
 ### **If launcher doesn't appear:**
 1. Go to Android Settings → Apps
-2. Find "VodouLauncher"
+2. Find "4GAuteauOS"
 3. Set as default home app
 
 ### **If build fails:**
@@ -88,8 +88,8 @@
 
 ## **📞 Support:**
 
-- **GitHub Issues:** https://github.com/ether4o4/VodouLauncher/issues
-- **Repository:** https://github.com/ether4o4/VodouLauncher
+- **GitHub Issues:** https://github.com/ether4o4/4GAuteauOS/issues
+- **Repository:** https://github.com/ether4o4/4GAuteauOS
 - **Documentation:** See `VISTA_EVOLVED_GUIDE.md` and `COPILOT_VSCODE_GUIDE.md`
 
 ## **🎉 Enjoy Your Vista-Evolved Android Launcher!**

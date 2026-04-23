@@ -1,4 +1,4 @@
-package com.vodoulacroix.launcher
+package com.fourgauteau.os
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.OvershootInterpolator
 import androidx.recyclerview.widget.RecyclerView
-import com.vodoulacroix.launcher.VistaLauncherActivity.VistaApp
-import com.vodoulacroix.launcher.databinding.VistaDesktopIconBinding
+import com.fourgauteau.os.VistaLauncherActivity.VistaApp
+import com.fourgauteau.os.databinding.VistaDesktopIconBinding
 
 /**
  * Adapter for Vista desktop icons with glass effects and animations

@@ -3,19 +3,19 @@
 echo "Updating app branding..."
 
 # Update app name in strings.xml
-sed -i 's/Olauncher/VodouLauncher/g' app/src/main/res/values/strings.xml
-sed -i 's/Olauncher Pro/VodouLauncher Pro/g' app/src/main/res/values/strings.xml
+sed -i 's/Olauncher/4GAuteauOS/g' app/src/main/res/values/strings.xml
+sed -i 's/Olauncher Pro/4GAuteauOS Pro/g' app/src/main/res/values/strings.xml
 
 # Update other string files
-find app/src/main/res -name "strings.xml" -exec sed -i 's/Olauncher/VodouLauncher/g' {} \;
+find app/src/main/res -name "strings.xml" -exec sed -i 's/Olauncher/4GAuteauOS/g' {} \;
 
 # Update launcher icons (we'll create simple replacements)
 # For now, just update references
-echo "Branding updated to VodouLauncher"
+echo "Branding updated to 4GAuteauOS"
 
 # Create a simple README
 cat > README.md << 'EOF'
-# VodouLauncher
+# 4GAuteauOS
 
 A minimalist Android launcher based on Olauncher, customized for VodouLaCroix.
 
@@ -33,7 +33,7 @@ A minimalist Android launcher based on Olauncher, customized for VodouLaCroix.
 
 ## Customization
 - Package: com.vodoulacroix.launcher
-- App name: VodouLauncher
+- App name: 4GAuteauOS
 - Branding: Custom for VodouLaCroix
 
 ## Credits

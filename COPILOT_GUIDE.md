@@ -1,4 +1,4 @@
-# GitHub Copilot Guide for VodouLauncher
+# GitHub Copilot Guide for 4GAuteauOS
 
 ## 🚀 How to Use Copilot with This Project
 

@@ -1,13 +1,13 @@
-package com.vodoulacroix.launcher
+package com.fourgauteau.os
 
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.vodoulacroix.launcher.helper.Prefs
-import com.vodoulacroix.launcher.helper.getAppsList
-import com.vodoulacroix.launcher.helper.isOlauncherDefault
+import com.fourgauteau.os.helper.Prefs
+import com.fourgauteau.os.helper.getAppsList
+import com.fourgauteau.os.helper.isOlauncherDefault
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

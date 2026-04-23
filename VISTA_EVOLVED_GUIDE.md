@@ -145,25 +145,25 @@ You asked for: **"the familiar feeling as Windows Vista but a more futuristic mo
 The app is already configured as a launcher. Users can:
 1. Install the APK
 2. Go to Android Settings → Apps → Default apps → Home app
-3. Select "VodouLauncher (Vista)"
+3. Select "4GAuteauOS (Vista)"
 
 ### **2. Switch Themes:**
 In `VistaLauncherActivity.kt`, change:
 ```kotlin
 // Blue Vista (default)
-setTheme(R.style.Theme_VodouLauncher_VistaEvolved_Blue)
+setTheme(R.style.Theme_4GAuteauOS_VistaEvolved_Blue)
 
 // Silver Vista
-setTheme(R.style.Theme_VodouLauncher_VistaEvolved_Silver)
+setTheme(R.style.Theme_4GAuteauOS_VistaEvolved_Silver)
 
 // Black Vista  
-setTheme(R.style.Theme_VodouLauncher_VistaEvolved_Black)
+setTheme(R.style.Theme_4GAuteauOS_VistaEvolved_Black)
 
 // True Aero Glass
-setTheme(R.style.Theme_VodouLauncher_VistaEvolved_Aero)
+setTheme(R.style.Theme_4GAuteauOS_VistaEvolved_Aero)
 
 // Futuristic Modern
-setTheme(R.style.Theme_VodouLauncher_VistaEvolved_Modern)
+setTheme(R.style.Theme_4GAuteauOS_VistaEvolved_Modern)
 ```
 
 ### **3. Customize Colors:**

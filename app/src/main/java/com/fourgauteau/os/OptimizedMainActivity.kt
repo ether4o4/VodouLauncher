@@ -1,4 +1,4 @@
-package com.vodoulacroix.launcher
+package com.fourgauteau.os
 
 import android.content.Context
 import android.content.Intent
@@ -13,10 +13,10 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import com.vodoulacroix.launcher.databinding.ActivityMainBinding
-import com.vodoulacroix.launcher.helper.CustomWelcome
-import com.vodoulacroix.launcher.helper.Prefs
-import com.vodoulacroix.launcher.helper.isEinkDisplay
+import com.fourgauteau.os.databinding.ActivityMainBinding
+import com.fourgauteau.os.helper.CustomWelcome
+import com.fourgauteau.os.helper.Prefs
+import com.fourgauteau.os.helper.isEinkDisplay
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

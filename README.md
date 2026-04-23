@@ -1,4 +1,4 @@
-# VodouLauncher
+# 4GAuteauOS 🎵🤖
 
 A minimalist Android launcher based on Olauncher, customized for VodouLaCroix.
 
@@ -16,7 +16,7 @@ A minimalist Android launcher based on Olauncher, customized for VodouLaCroix.
 
 ## Customization
 - Package: com.vodoulacroix.launcher
-- App name: VodouLauncher
+- App name: 4GAuteauOS
 - Branding: Custom for VodouLaCroix
 
 ## Credits

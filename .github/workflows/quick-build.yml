@@ -26,7 +26,7 @@ jobs:
     
     - name: Build APK
       run: |
-        echo "🚀 Starting VodouLauncher build..."
+        echo "🚀 Starting 4GAuteauOS build..."
         ./gradlew assembleDebug --no-daemon
         echo "✅ Build complete!"
     
@@ -51,14 +51,14 @@ jobs:
     - name: Upload APK as artifact
       uses: actions/upload-artifact@v4
       with:
-        name: vodoulauncher-apk
+        name: 4gauteauos-apk
         path: ${{ steps.find_apk.outputs.APK_PATH }}
         retention-days: 7
     
     - name: Create direct download info
       id: download_info
       run: |
-        echo "## 🎉 VodouLauncher APK Ready!" >> $GITHUB_STEP_SUMMARY
+        echo "## 🎉 4GAuteauOS APK Ready!" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "**Build Details:**" >> $GITHUB_STEP_SUMMARY
         echo "- APK: \`${{ steps.find_apk.outputs.APK_NAME }}\`" >> $GITHUB_STEP_SUMMARY
@@ -66,7 +66,7 @@ jobs:
         echo "- Build: #${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "**📥 Download Links:**" >> $GITHUB_STEP_SUMMARY
-        echo "1. [Direct Download from GitHub Actions](https://github.com/ether4o4/VodouLauncher/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }})" >> $GITHUB_STEP_SUMMARY
+        echo "1. [Direct Download from GitHub Actions](https://github.com/ether4o4/4GAuteauOS/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }})" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "**📱 Installation:**" >> $GITHUB_STEP_SUMMARY
         echo "1. Download the APK file" >> $GITHUB_STEP_SUMMARY
@@ -83,18 +83,18 @@ jobs:
     - name: Output download URL
       run: |
         echo "=========================================="
-        echo "🚀 VODOU LAUNCHER APK READY FOR DOWNLOAD!"
+        echo "🚀 4GAUTEAU OS APK READY FOR DOWNLOAD!"
         echo "=========================================="
         echo ""
         echo "📱 APK: ${{ steps.find_apk.outputs.APK_NAME }}"
         echo "📦 Size: ${{ steps.find_apk.outputs.APK_SIZE }} MB"
         echo ""
         echo "🔗 DOWNLOAD LINK:"
-        echo "https://github.com/ether4o4/VodouLauncher/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }}"
+        echo "https://github.com/ether4o4/4GAuteauOS/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }}"
         echo ""
         echo "📝 To download:"
         echo "1. Click the link above"
-        echo "2. Click on 'vodoulauncher-apk'"
+        echo "2. Click on '4gauteauos-apk'"
         echo "3. Download the APK file"
         echo "4. Install on Android device"
         echo ""

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# VodouLauncher Local Build Script
+# 4GAuteauOS Local Build Script
 # Run this on a machine with Android Studio or Android SDK installed
 
-echo "🚀 Building VodouLauncher APK locally..."
+echo "🚀 Building 4GAuteauOS APK locally..."
 echo "========================================"
 
 # Check for Java
@@ -63,7 +63,7 @@ if [ $? -eq 0 ]; then
         APK_SIZE_MB=$(echo "scale=2; $APK_SIZE / 1024 / 1024" | bc)
         
         echo ""
-        echo "🎉 VODOU LAUNCHER APK READY!"
+        echo "🎉 4GAUTEAU OS APK READY!"
         echo "============================="
         echo "📱 APK: $APK_NAME"
         echo "📦 Size: ${APK_SIZE_MB}MB"
@@ -79,8 +79,8 @@ if [ $? -eq 0 ]; then
         echo "============================="
         
         # Copy to current directory for easy access
-        cp "$APK_FILE" "./vodoulauncher-debug.apk"
-        echo "📥 Also copied to: ./vodoulauncher-debug.apk"
+        cp "$APK_FILE" "./4gauteauos-debug.apk"
+        echo "📥 Also copied to: ./4gauteauos-debug.apk"
     else
         echo "❌ APK file not found in build output"
         echo "   Check app/build/outputs/apk/ directory"

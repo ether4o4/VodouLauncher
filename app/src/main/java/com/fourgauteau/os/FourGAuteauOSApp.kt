@@ -1,14 +1,14 @@
-package com.vodoulacroix.launcher
+package com.fourgauteau.os
 
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.vodoulacroix.launcher.performance.PerformanceMonitor
-import com.vodoulacroix.launcher.performance.AppLifecycleObserver
+import com.fourgauteau.os.performance.PerformanceMonitor
+import com.fourgauteau.os.performance.AppLifecycleObserver
 import timber.log.Timber
 
 /**
- * Performance-optimized Application class for VodouLauncher
+ * Performance-optimized Application class for 4GAuteauOS
  * 
  * Features:
  * 1. Performance monitoring
@@ -16,34 +16,34 @@ import timber.log.Timber
  * 3. Crash reporting setup
  * 4. Dependency initialization
  */
-class VodouLauncherApp : Application() {
-    
+class FourGAuteauOSApp : Application() {
+
     companion object {
-        private lateinit var instance: VodouLauncherApp
-        
+        private lateinit var instance: FourGAuteauOSApp
+
         fun getAppContext(): Context = instance.applicationContext
     }
-    
+
     override fun onCreate() {
         super.onCreate()
         instance = this
-        
+
         // Initialize performance monitoring
         initializePerformanceMonitoring()
-        
+
         // Initialize logging
         initializeLogging()
-        
+
         // Initialize app lifecycle observer
         initializeLifecycleObserver()
-        
+
         // Initialize dependencies
         initializeDependencies()
-        
+
         // Log app startup
-        Timber.d("VodouLauncher application created")
+        Timber.d("4GAuteauOS application created")
     }
-    
+
     /**
      * Initialize performance monitoring
      */
@@ -51,7 +51,7 @@ class VodouLauncherApp : Application() {
         PerformanceMonitor.initialize(this)
         Timber.d("Performance monitoring initialized")
     }
-    
+
     /**
      * Initialize logging system
      */
@@ -64,7 +64,7 @@ class VodouLauncherApp : Application() {
             // Timber.plant(CrashReportingTree())
         }
     }
-    
+
     /**
      * Initialize app lifecycle observer
      */
@@ -72,29 +72,29 @@ class VodouLauncherApp : Application() {
         ProcessLifecycleOwner.get().lifecycle.addObserver(AppLifecycleObserver())
         Timber.d("App lifecycle observer initialized")
     }
-    
+
     /**
      * Initialize app dependencies
      */
     private fun initializeDependencies() {
         // Initialize any app-wide dependencies here
         // Keep this lightweight - don't initialize heavy libraries
-        
+
         Timber.d("App dependencies initialized")
     }
-    
+
     override fun onLowMemory() {
         super.onLowMemory()
         Timber.w("Low memory warning - clearing caches")
-        
+
         // Clear any caches or temporary data
         clearMemoryCaches()
     }
-    
+
     override fun onTrimMemory(level: Int) {
         super.onTrimMemory(level)
         Timber.d("Trim memory level: $level")
-        
+
         when (level) {
             TRIM_MEMORY_RUNNING_MODERATE,
             TRIM_MEMORY_RUNNING_LOW,
@@ -114,7 +114,7 @@ class VodouLauncherApp : Application() {
             }
         }
     }
-    
+
     /**
      * Clear memory caches
      */
@@ -122,42 +122,42 @@ class VodouLauncherApp : Application() {
         // Clear image caches, bitmap pools, etc.
         // This should be implemented by specific cache managers
     }
-    
+
     /**
      * Clear non-essential memory
      */
     private fun clearNonEssentialMemory() {
         // Clear temporary data, non-essential caches
     }
-    
+
     /**
      * Clear background memory
      */
     private fun clearBackgroundMemory() {
         // Clear more aggressive caches when in background
     }
-    
+
     /**
      * Clear UI memory
      */
     private fun clearUIMemory() {
         // Clear UI-related memory when UI is hidden
     }
-    
+
     /**
      * Get performance report
      */
     fun getPerformanceReport(): Map<String, Any> {
         return PerformanceMonitor.getPerformanceReport()
     }
-    
+
     /**
      * Check if performance is good
      */
     fun isPerformanceGood(): Boolean {
         return PerformanceMonitor.isPerformanceGood()
     }
-    
+
     /**
      * Get performance score
      */

@@ -1,4 +1,4 @@
-name: Build VodouLauncher APK
+name: Build 4GAuteauOS APK
 
 on:
   push:
@@ -81,7 +81,7 @@ jobs:
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
-        name: vodoulauncher-apk
+        name: 4gauteauos-apk
         path: |
           app/build/outputs/apk/debug/*.apk
           app/build/outputs/apk/release/*.apk
@@ -109,9 +109,9 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: build-${{ github.run_number }}
-        name: "VodouLauncher Build #${{ github.run_number }}"
+        name: "4GAuteauOS Build #${{ github.run_number }}"
         body: |
-          # VodouLauncher APK Build
+          # 4GAuteauOS APK Build
           
           **Build Information:**
           - Build Number: ${{ github.run_number }}
@@ -133,7 +133,7 @@ jobs:
           - Modern Android launcher
           - GitHub Copilot ready
           
-          **Repository:** https://github.com/ether4o4/VodouLauncher
+          **Repository:** https://github.com/ether4o4/4GAuteauOS
         draft: false
         prerelease: false
         files: |
@@ -150,9 +150,9 @@ jobs:
         echo "- Size: ${{ steps.apk_info.outputs.APK_SIZE }} MB" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "**Download Links:**" >> $GITHUB_STEP_SUMMARY
-        echo "1. [Download APK from Artifacts](https://github.com/ether4o4/VodouLauncher/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }})" >> $GITHUB_STEP_SUMMARY
+        echo "1. [Download APK from Artifacts](https://github.com/ether4o4/4GAuteauOS/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }})" >> $GITHUB_STEP_SUMMARY
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        echo "2. [GitHub Release](https://github.com/ether4o4/VodouLauncher/releases/tag/build-${{ github.run_number }})" >> $GITHUB_STEP_SUMMARY
+        echo "2. [GitHub Release](https://github.com/ether4o4/4GAuteauOS/releases/tag/build-${{ github.run_number }})" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "**Next Steps:**" >> $GITHUB_STEP_SUMMARY
         echo "1. Download the APK" >> $GITHUB_STEP_SUMMARY
@@ -167,14 +167,14 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
         if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
-          MESSAGE="🚀 VodouLauncher APK Build Complete!
+          MESSAGE="🚀 4GAuteauOS APK Build Complete!
           
           ✅ Build #${{ github.run_number }} successful!
           
           📱 APK: ${{ steps.apk_info.outputs.APK_NAME }}
           📦 Size: ${{ steps.apk_info.outputs.APK_SIZE }} MB
           
-          🔗 Download: https://github.com/ether4o4/VodouLauncher/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }}
+          🔗 Download: https://github.com/ether4o4/4GAuteauOS/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }}
           
           📝 Commit: ${{ github.sha }}
           

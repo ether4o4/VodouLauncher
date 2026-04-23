@@ -1,4 +1,4 @@
-package com.vodoulacroix.launcher
+package com.fourgauteau.os
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -21,10 +21,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.vodoulacroix.launcher.databinding.VistaDesktopBinding
-import com.vodoulacroix.launcher.helper.CustomWelcome
-import com.vodoulacroix.launcher.helper.Prefs
-import com.vodoulacroix.launcher.helper.isEinkDisplay
+import com.fourgauteau.os.databinding.VistaDesktopBinding
+import com.fourgauteau.os.helper.CustomWelcome
+import com.fourgauteau.os.helper.Prefs
+import com.fourgauteau.os.helper.isEinkDisplay
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -64,7 +64,7 @@ class VistaLauncherActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(prefs.appTheme)
         
         // Apply Vista theme
-        setTheme(R.style.Theme_VodouLauncher_VistaEvolved_Blue)
+        setTheme(R.style.Theme_4GAuteauOS_VistaEvolved_Blue)
         
         super.onCreate(savedInstanceState)
         

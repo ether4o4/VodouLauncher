@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.vodoulacroix.launcher"
+        applicationId "com.fourgauteau.os"
         minSdkVersion 24
         targetSdkVersion 35
         versionCode 105
@@ -42,7 +42,7 @@ android {
         viewBinding = true
         buildConfig = true
     }
-    namespace 'com.vodoulacroix.launcher'
+    namespace 'com.fourgauteau.os'
 }
 
 dependencies {

@@ -1,10 +1,10 @@
-# 🚀 GitHub Copilot + VS Code: VodouLauncher Optimization Guide
+# 🚀 GitHub Copilot + VS Code: 4GAuteauOS Optimization Guide
 
 ## **Quick Start for Maximum Productivity**
 
 ### **1. Open Project in VS Code**
 ```bash
-code /path/to/VodouLauncher
+code /path/to/4GAuteauOS
 ```
 
 ### **2. Install Essential Extensions**
@@ -17,7 +17,7 @@ code /path/to/VodouLauncher
 ### **3. Enable Copilot Everywhere**
 Press `Ctrl+Shift+P` → "GitHub Copilot: Enable Completions in All Languages"
 
-## **🔥 Copilot Prompts for VodouLauncher Optimization**
+## **🔥 Copilot Prompts for 4GAuteauOS Optimization**
 
 ### **Performance Optimization Prompts**
 
@@ -343,7 +343,7 @@ Use these Copilot prompts to measure success:
 Try this ultimate Copilot prompt:
 
 ```
-// Copilot: Transform VodouLauncher into the fastest, smoothest, 
+// Copilot: Transform 4GAuteauOS into the fastest, smoothest, 
 // most battery-efficient Android launcher ever created.
 // Use every optimization technique you know.
 // Make it feel like using a $5000 phone on a $200 device.
@@ -366,6 +366,6 @@ Try this ultimate Copilot prompt:
 
 ---
 
-**Remember:** Copilot learns from your codebase. The more you use it with VodouLauncher, the better its suggestions will become for Android launcher optimization!
+**Remember:** Copilot learns from your codebase. The more you use it with 4GAuteauOS, the better its suggestions will become for Android launcher optimization!
 
 **Happy optimizing with GitHub Copilot!** 🚀

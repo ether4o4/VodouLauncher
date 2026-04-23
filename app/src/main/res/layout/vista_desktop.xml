@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:text="14:30"
-                android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Clock"
+                android:textAppearance="@style/TextAppearance.4GAuteauOS.Vista.Clock"
                 android:textColor="@color/vista_text_primary" />
 
             <!-- Battery -->
@@ -165,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/app_name"
-                    android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Title"
+                    android:textAppearance="@style/TextAppearance.4GAuteauOS.Vista.Title"
                     android:textColor="@color/vista_text_primary" />
 
                 <ImageButton
@@ -212,7 +212,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
                     android:text="VodouLaCroix"
-                    android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Subtitle"
+                    android:textAppearance="@style/TextAppearance.4GAuteauOS.Vista.Subtitle"
                     android:textColor="@color/vista_text_secondary" />
 
                 <ImageButton
@@ -252,7 +252,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="Notifications"
-                android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Title"
+                android:textAppearance="@style/TextAppearance.4GAuteauOS.Vista.Title"
                 android:textColor="@color/vista_text_primary" />
 
             <!-- Notifications List -->
@@ -347,7 +347,7 @@
                 android:hint="Search apps, files, settings..."
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-                android:textAppearance="@style/TextAppearance.VodouLauncher.Vista.Body"
+                android:textAppearance="@style/TextAppearance.4GAuteauOS.Vista.Body"
                 android:textColor="@color/vista_text_primary"
                 android:textColorHint="@color/vista_text_secondary" />
         </LinearLayout>

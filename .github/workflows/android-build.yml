@@ -32,7 +32,7 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: vodoulauncher-debug
+        name: 4gauteauos-debug
         path: app/build/outputs/apk/debug/*.apk
         
     - name: Upload mapping file

@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# VodouLauncher Optimization Script
+# 4GAuteauOS Optimization Script
 # This script applies all performance optimizations to the project
 
-echo "🚀 Starting VodouLauncher Optimization Process..."
+echo "🚀 Starting 4GAuteauOS Optimization Process..."
 echo "=============================================="
 
 # 1. Check if we're in the right directory
 if [ ! -f "app/build.gradle" ]; then
-    echo "❌ Error: Not in VodouLauncher project directory"
+    echo "❌ Error: Not in 4GAuteauOS project directory"
     exit 1
 fi
 
@@ -53,7 +53,7 @@ echo "📄 Step 5: Verifying optimized files..."
 OPTIMIZED_FILES=(
     "app/src/main/java/com/vodoulacroix/launcher/OptimizedMainActivity.kt"
     "app/src/main/java/com/vodoulacroix/launcher/PerformanceViewModel.kt"
-    "app/src/main/java/com/vodoulacroix/launcher/VodouLauncherApp.kt"
+    "app/src/main/java/com/vodoulacroix/launcher/4GAuteauOSApp.kt"
     "app/src/main/java/com/vodoulacroix/launcher/performance/PerformanceMonitor.kt"
     "app/src/main/java/com/vodoulacroix/launcher/performance/AppLifecycleObserver.kt"
     "app/src/main/res/values/glass_colors.xml"
@@ -104,11 +104,11 @@ fi
 # 8. Generate optimization report
 echo "📊 Step 8: Generating optimization report..."
 cat > optimization_report.md << 'EOF'
-# VodouLauncher Optimization Report
+# 4GAuteauOS Optimization Report
 
 ## Summary
 - **Date**: $(date)
-- **Project**: VodouLauncher
+- **Project**: 4GAuteauOS
 - **Status**: Optimization applied
 
 ## Applied Optimizations
@@ -154,7 +154,7 @@ cat > optimization_report.md << 'EOF'
 ### New Files:
 - `OptimizedMainActivity.kt` - Lazy loading main activity
 - `PerformanceViewModel.kt` - Optimized ViewModel
-- `VodouLauncherApp.kt` - Performance-aware Application class
+- `4GAuteauOSApp.kt` - Performance-aware Application class
 - `PerformanceMonitor.kt` - Performance tracking system
 - `AppLifecycleObserver.kt` - Lifecycle monitoring
 - `glass_colors.xml` - Futuristic glass theme colors
@@ -220,7 +220,7 @@ echo ""
 echo "Performance monitoring tags in logcat:"
 echo "- PerformanceMonitor"
 echo "- AppLifecycleObserver"
-echo "- VodouLauncherApp"
+echo "- 4GAuteauOSApp"
 echo ""
 
 # 10. Create VS Code settings for Copilot

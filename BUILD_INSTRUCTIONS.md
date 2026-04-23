@@ -1,4 +1,4 @@
-# VodouLauncher - Build Instructions
+# 4GAuteauOS - Build Instructions
 
 ## Prerequisites
 1. **Android Studio** (latest version)
@@ -46,8 +46,8 @@ The APK will be generated at:
 
 ### 1. Custom Branding
 - Package name: `com.vodoulacroix.launcher`
-- App name: `VodouLauncher`
-- Updated all references from Olauncher to VodouLauncher
+- App name: `4GAuteauOS`
+- Updated all references from Olauncher to 4GAuteauOS
 
 ### 2. Welcome Message System
 - Custom welcome toast on first launch

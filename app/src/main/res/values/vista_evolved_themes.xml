@@ -3,7 +3,7 @@
     <!-- Vista Evolved Theme - Familiar Vista feeling but futuristic and modern -->
     
     <!-- Base Vista Evolved Theme -->
-    <style name="Theme.VodouLauncher.VistaEvolved" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.4GAuteauOS.VistaEvolved" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Vista Color Scheme (Evolved) -->
         <item name="colorPrimary">@color/vista_evolved_blue</item>
         <item name="colorPrimaryVariant">@color/vista_evolved_blue_dark</item>
@@ -40,18 +40,18 @@
         <item name="android:fontFamily">sans-serif</item>
         
         <!-- Vista Button Styles -->
-        <item name="materialButtonStyle">@style/Widget.VodouLauncher.VistaButton</item>
-        <item name="borderlessButtonStyle">@style/Widget.VodouLauncher.VistaBorderlessButton</item>
+        <item name="materialButtonStyle">@style/Widget.4GAuteauOS.VistaButton</item>
+        <item name="borderlessButtonStyle">@style/Widget.4GAuteauOS.VistaBorderlessButton</item>
         
         <!-- Vista Card Style -->
-        <item name="materialCardViewStyle">@style/Widget.VodouLauncher.VistaCard</item>
+        <item name="materialCardViewStyle">@style/Widget.4GAuteauOS.VistaCard</item>
         
         <!-- Vista Dialog Styles -->
-        <item name="android:dialogTheme">@style/Theme.VodouLauncher.VistaEvolved.Dialog</item>
-        <item name="android:alertDialogTheme">@style/Theme.VodouLauncher.VistaEvolved.Dialog.Alert</item>
+        <item name="android:dialogTheme">@style/Theme.4GAuteauOS.VistaEvolved.Dialog</item>
+        <item name="android:alertDialogTheme">@style/Theme.4GAuteauOS.VistaEvolved.Dialog.Alert</item>
         
         <!-- Vista Animation -->
-        <item name="android:windowAnimationStyle">@style/Animation.VodouLauncher.Vista</item>
+        <item name="android:windowAnimationStyle">@style/Animation.4GAuteauOS.Vista</item>
         
         <!-- Vista Elevation/Shadows -->
         <item name="android:elevation">8dp</item>
@@ -62,7 +62,7 @@
     </style>
     
     <!-- Vista Button -->
-    <style name="Widget.VodouLauncher.VistaButton" parent="Widget.Material3.Button">
+    <style name="Widget.4GAuteauOS.VistaButton" parent="Widget.Material3.Button">
         <item name="android:background">@drawable/vista_button_background</item>
         <item name="android:textColor">@color/vista_text_primary</item>
         <item name="android:minHeight">48dp</item>
@@ -74,7 +74,7 @@
     </style>
     
     <!-- Vista Borderless Button -->
-    <style name="Widget.VodouLauncher.VistaBorderlessButton" parent="Widget.Material3.Button.TextButton">
+    <style name="Widget.4GAuteauOS.VistaBorderlessButton" parent="Widget.Material3.Button.TextButton">
         <item name="android:background">@drawable/vista_borderless_button</item>
         <item name="android:textColor">@color/vista_evolved_blue_light</item>
         <item name="android:minHeight">48dp</item>
@@ -84,7 +84,7 @@
     </style>
     
     <!-- Vista Card -->
-    <style name="Widget.VodouLauncher.VistaCard" parent="Widget.Material3.CardView">
+    <style name="Widget.4GAuteauOS.VistaCard" parent="Widget.Material3.CardView">
         <item name="cardBackgroundColor">@color/vista_card_dark</item>
         <item name="cardCornerRadius">12dp</item>
         <item name="cardElevation">8dp</item>
@@ -95,25 +95,25 @@
     </style>
     
     <!-- Vista Dialog Theme -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Dialog" parent="ThemeOverlay.Material3.Dialog">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Dialog" parent="ThemeOverlay.Material3.Dialog">
         <item name="android:windowBackground">@drawable/vista_dialog_background</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.6</item>
         <item name="colorSurface">@color/vista_card_dark</item>
         <item name="colorOnSurface">@color/vista_text_primary</item>
-        <item name="android:windowAnimationStyle">@style/Animation.VodouLauncher.Vista.Dialog</item>
+        <item name="android:windowAnimationStyle">@style/Animation.4GAuteauOS.Vista.Dialog</item>
     </style>
     
     <!-- Vista Alert Dialog -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Dialog.Alert" parent="ThemeOverlay.Material3.Dialog.Alert">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Dialog.Alert" parent="ThemeOverlay.Material3.Dialog.Alert">
         <item name="android:windowBackground">@drawable/vista_dialog_background</item>
         <item name="colorSurface">@color/vista_card_dark</item>
         <item name="colorOnSurface">@color/vista_text_primary</item>
     </style>
     
     <!-- Vista Animations -->
-    <style name="Animation.VodouLauncher.Vista" parent="@android:style/Animation">
+    <style name="Animation.4GAuteauOS.Vista" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/vista_fade_in</item>
         <item name="android:windowExitAnimation">@anim/vista_fade_out</item>
         <item name="android:activityOpenEnterAnimation">@anim/vista_slide_in_right</item>
@@ -127,13 +127,13 @@
     </style>
     
     <!-- Vista Dialog Animations -->
-    <style name="Animation.VodouLauncher.Vista.Dialog" parent="@android:style/Animation.Dialog">
+    <style name="Animation.4GAuteauOS.Vista.Dialog" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/vista_dialog_enter</item>
         <item name="android:windowExitAnimation">@anim/vista_dialog_exit</item>
     </style>
     
     <!-- Vista Light Theme -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Light" parent="Theme.VodouLauncher.VistaEvolved">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Light" parent="Theme.4GAuteauOS.VistaEvolved">
         <item name="colorSurface">@color/vista_surface_light</item>
         <item name="colorOnSurface">@color/vista_uhd_black</item>
         <item name="android:textColor">@color/vista_uhd_black</item>
@@ -144,7 +144,7 @@
     </style>
     
     <!-- Vista Blue Theme (Classic Vista) -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Blue" parent="Theme.VodouLauncher.VistaEvolved">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Blue" parent="Theme.4GAuteauOS.VistaEvolved">
         <item name="colorPrimary">@color/vista_evolved_blue</item>
         <item name="colorPrimaryVariant">@color/vista_evolved_blue_dark</item>
         <item name="colorSecondary">@color/vista_evolved_silver</item>
@@ -152,7 +152,7 @@
     </style>
     
     <!-- Vista Silver Theme -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Silver" parent="Theme.VodouLauncher.VistaEvolved">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Silver" parent="Theme.4GAuteauOS.VistaEvolved">
         <item name="colorPrimary">@color/vista_evolved_silver</item>
         <item name="colorPrimaryVariant">@color/vista_evolved_silver_dark</item>
         <item name="colorSecondary">@color/vista_evolved_blue</item>
@@ -160,7 +160,7 @@
     </style>
     
     <!-- Vista Black Theme -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Black" parent="Theme.VodouLauncher.VistaEvolved">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Black" parent="Theme.4GAuteauOS.VistaEvolved">
         <item name="colorPrimary">@color/vista_evolved_black</item>
         <item name="colorPrimaryVariant">@color/vista_evolved_black_dark</item>
         <item name="colorSecondary">@color/vista_evolved_blue_light</item>
@@ -168,7 +168,7 @@
     </style>
     
     <!-- Vista Aero Theme (True Vista Glass) -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Aero" parent="Theme.VodouLauncher.VistaEvolved">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Aero" parent="Theme.4GAuteauOS.VistaEvolved">
         <item name="colorPrimary">@color/vista_aero_blue</item>
         <item name="colorSurface">@color/vista_glass_clear</item>
         <item name="android:windowBackground">@drawable/vista_aero_background</item>
@@ -176,16 +176,16 @@
     </style>
     
     <!-- Vista Modern Theme (Futuristic Evolution) -->
-    <style name="Theme.VodouLauncher.VistaEvolved.Modern" parent="Theme.VodouLauncher.VistaEvolved">
+    <style name="Theme.4GAuteauOS.VistaEvolved.Modern" parent="Theme.4GAuteauOS.VistaEvolved">
         <item name="colorPrimary">@color/vista_modern_cyan</item>
         <item name="colorSecondary">@color/vista_modern_magenta</item>
         <item name="colorPrimaryVariant">@color/vista_modern_teal</item>
         <item name="android:windowBackground">@drawable/vista_modern_background</item>
-        <item name="android:windowAnimationStyle">@style/Animation.VodouLauncher.Vista.Modern</item>
+        <item name="android:windowAnimationStyle">@style/Animation.4GAuteauOS.Vista.Modern</item>
     </style>
     
     <!-- Vista Modern Animations -->
-    <style name="Animation.VodouLauncher.Vista.Modern" parent="Animation.VodouLauncher.Vista">
+    <style name="Animation.4GAuteauOS.Vista.Modern" parent="Animation.4GAuteauOS.Vista">
         <item name="android:windowEnterAnimation">@anim/vista_modern_enter</item>
         <item name="android:windowExitAnimation">@anim/vista_modern_exit</item>
         <item name="android:activityOpenEnterAnimation">@anim/vista_modern_slide_in</item>
@@ -193,7 +193,7 @@
     </style>
     
     <!-- Vista Taskbar Style -->
-    <style name="Widget.VodouLauncher.VistaTaskbar" parent="android:Widget">
+    <style name="Widget.4GAuteauOS.VistaTaskbar" parent="android:Widget">
         <item name="android:background">@drawable/vista_taskbar_background</item>
         <item name="android:minHeight">56dp</item>
         <item name="android:paddingStart">8dp</item>
@@ -201,7 +201,7 @@
     </style>
     
     <!-- Vista Start Menu Style -->
-    <style name="Widget.VodouLauncher.VistaStartMenu" parent="android:Widget">
+    <style name="Widget.4GAuteauOS.VistaStartMenu" parent="android:Widget">
         <item name="android:background">@drawable/vista_start_menu_background</item>
         <item name="android:minWidth">320dp</item>
         <item name="android:minHeight">480dp</item>
@@ -209,7 +209,7 @@
     </style>
     
     <!-- Vista Window Style -->
-    <style name="Widget.VodouLauncher.VistaWindow" parent="android:Widget">
+    <style name="Widget.4GAuteauOS.VistaWindow" parent="android:Widget">
         <item name="android:background">@drawable/vista_window_frame</item>
         <item name="android:minWidth">240dp</item>
         <item name="android:minHeight">160dp</item>
@@ -217,7 +217,7 @@
     </style>
     
     <!-- Vista Title Bar Style -->
-    <style name="Widget.VodouLauncher.VistaTitleBar" parent="android:Widget">
+    <style name="Widget.4GAuteauOS.VistaTitleBar" parent="android:Widget">
         <item name="android:background">@drawable/vista_titlebar_background</item>
         <item name="android:minHeight">48dp</item>
         <item name="android:paddingStart">16dp</item>
@@ -225,7 +225,7 @@
     </style>
     
     <!-- Vista Icon Style -->
-    <style name="Widget.VodouLauncher.VistaIcon" parent="android:Widget">
+    <style name="Widget.4GAuteauOS.VistaIcon" parent="android:Widget">
         <item name="android:background">@drawable/vista_icon_background</item>
         <item name="android:minWidth">64dp</item>
         <item name="android:minHeight">64dp</item>
@@ -233,7 +233,7 @@
     </style>
     
     <!-- Vista Notification Style -->
-    <style name="Widget.VodouLauncher.VistaNotification" parent="android:Widget">
+    <style name="Widget.4GAuteauOS.VistaNotification" parent="android:Widget">
         <item name="android:background">@drawable/vista_notification_background</item>
         <item name="android:minWidth">280dp</item>
         <item name="android:minHeight">80dp</item>
@@ -242,7 +242,7 @@
     </style>
     
     <!-- Vista Tooltip Style -->
-    <style name="Widget.VodouLauncher.VistaTooltip" parent="android:Widget">
+    <style name="Widget.4GAuteauOS.VistaTooltip" parent="android:Widget">
         <item name="android:background">@drawable/vista_tooltip_background</item>
         <item name="android:minWidth">120dp</item>
         <item name="android:minHeight">40dp</item>
@@ -251,7 +251,7 @@
     </style>
     
     <!-- Vista Progress Bar Style -->
-    <style name="Widget.VodouLauncher.VistaProgressBar" parent="android:Widget.ProgressBar">
+    <style name="Widget.4GAuteauOS.VistaProgressBar" parent="android:Widget.ProgressBar">
         <item name="android:progressDrawable">@drawable/vista_progress_bar</item>
         <item name="android:indeterminateDrawable">@drawable/vista_progress_indeterminate</item>
         <item name="android:minHeight">4dp</item>
@@ -259,25 +259,25 @@
     </style>
     
     <!-- Vista Seek Bar Style -->
-    <style name="Widget.VodouLauncher.VistaSeekBar" parent="android:Widget.SeekBar">
+    <style name="Widget.4GAuteauOS.VistaSeekBar" parent="android:Widget.SeekBar">
         <item name="android:progressDrawable">@drawable/vista_seek_bar</item>
         <item name="android:thumb">@drawable/vista_seek_thumb</item>
         <item name="android:splitTrack">false</item>
     </style>
     
     <!-- Vista Switch Style -->
-    <style name="Widget.VodouLauncher.VistaSwitch" parent="android:Widget.CompoundButton.Switch">
+    <style name="Widget.4GAuteauOS.VistaSwitch" parent="android:Widget.CompoundButton.Switch">
         <item name="android:track">@drawable/vista_switch_track</item>
         <item name="android:thumb">@drawable/vista_switch_thumb</item>
     </style>
     
     <!-- Vista Checkbox Style -->
-    <style name="Widget.VodouLauncher.VistaCheckbox" parent="android:Widget.CompoundButton.CheckBox">
+    <style name="Widget.4GAuteauOS.VistaCheckbox" parent="android:Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/vista_checkbox</item>
     </style>
     
     <!-- Vista Radio Button Style -->
-    <style name="Widget.VodouLauncher.VistaRadioButton" parent="android:Widget.CompoundButton.RadioButton">
+    <style name="Widget.4GAuteauOS.VistaRadioButton" parent="android:Widget.CompoundButton.RadioButton">
         <item name="android:button">@drawable/vista_radio_button</item>
     </style>
 </resources>

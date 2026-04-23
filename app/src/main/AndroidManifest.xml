@@ -27,8 +27,8 @@
         android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".VodouLauncherApp"
-        android:theme="@style/Theme.VodouLauncher.Glass"
+        android:name=".FourGAuteauOSApp"
+        android:theme="@style/Theme.4GAuteauOS.Glass"
         tools:ignore="UnusedAttribute">
 
         <!-- Vista Launcher (Default) -->

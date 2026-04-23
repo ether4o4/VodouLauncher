@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme -->
-    <style name="Theme.VodouLauncher" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.4GAuteauOS" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your theme here -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -31,7 +31,7 @@
     </style>
 
     <!-- Futuristic Glass Theme -->
-    <style name="Theme.VodouLauncher.Glass" parent="Theme.VodouLauncher">
+    <style name="Theme.4GAuteauOS.Glass" parent="Theme.4GAuteauOS">
         <!-- Glass surface colors -->
         <item name="colorSurface">@color/glass_dark_surface_translucent</item>
         <item name="colorOnSurface">@color/text_on_glass_dark</item>
@@ -52,19 +52,19 @@
         <item name="android:textColorHint">@color/glass_disabled_text</item>
         
         <!-- Button styles -->
-        <item name="materialButtonStyle">@style/Widget.VodouLauncher.GlassButton</item>
-        <item name="borderlessButtonStyle">@style/Widget.VodouLauncher.GlassBorderlessButton</item>
+        <item name="materialButtonStyle">@style/Widget.4GAuteauOS.GlassButton</item>
+        <item name="borderlessButtonStyle">@style/Widget.4GAuteauOS.GlassBorderlessButton</item>
         
         <!-- Card styles -->
-        <item name="materialCardViewStyle">@style/Widget.VodouLauncher.GlassCard</item>
+        <item name="materialCardViewStyle">@style/Widget.4GAuteauOS.GlassCard</item>
         
         <!-- Dialog styles -->
-        <item name="android:dialogTheme">@style/Theme.VodouLauncher.Glass.Dialog</item>
-        <item name="android:alertDialogTheme">@style/Theme.VodouLauncher.Glass.Dialog.Alert</item>
+        <item name="android:dialogTheme">@style/Theme.4GAuteauOS.Glass.Dialog</item>
+        <item name="android:alertDialogTheme">@style/Theme.4GAuteauOS.Glass.Dialog.Alert</item>
     </style>
 
     <!-- Glass Button -->
-    <style name="Widget.VodouLauncher.GlassButton" parent="Widget.Material3.Button">
+    <style name="Widget.4GAuteauOS.GlassButton" parent="Widget.Material3.Button">
         <item name="android:background">@drawable/glass_button_background</item>
         <item name="android:textColor">@color/text_on_glass_dark</item>
         <item name="android:minHeight">48dp</item>
@@ -75,7 +75,7 @@
     </style>
 
     <!-- Glass Borderless Button -->
-    <style name="Widget.VodouLauncher.GlassBorderlessButton" parent="Widget.Material3.Button.TextButton">
+    <style name="Widget.4GAuteauOS.GlassBorderlessButton" parent="Widget.Material3.Button.TextButton">
         <item name="android:background">@drawable/glass_borderless_button</item>
         <item name="android:textColor">@color/futuristic_cyan</item>
         <item name="android:minHeight">48dp</item>
@@ -84,7 +84,7 @@
     </style>
 
     <!-- Glass Card -->
-    <style name="Widget.VodouLauncher.GlassCard" parent="Widget.Material3.CardView">
+    <style name="Widget.4GAuteauOS.GlassCard" parent="Widget.Material3.CardView">
         <item name="cardBackgroundColor">@color/glass_card_dark</item>
         <item name="cardCornerRadius">16dp</item>
         <item name="cardElevation">4dp</item>
@@ -93,7 +93,7 @@
     </style>
 
     <!-- Glass Dialog Theme -->
-    <style name="Theme.VodouLauncher.Glass.Dialog" parent="ThemeOverlay.Material3.Dialog">
+    <style name="Theme.4GAuteauOS.Glass.Dialog" parent="ThemeOverlay.Material3.Dialog">
         <item name="android:windowBackground">@drawable/glass_dialog_background</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">true</item>
@@ -103,19 +103,19 @@
     </style>
 
     <!-- Glass Alert Dialog -->
-    <style name="Theme.VodouLauncher.Glass.Dialog.Alert" parent="ThemeOverlay.Material3.Dialog.Alert">
+    <style name="Theme.4GAuteauOS.Glass.Dialog.Alert" parent="ThemeOverlay.Material3.Dialog.Alert">
         <item name="android:windowBackground">@drawable/glass_dialog_background</item>
         <item name="colorSurface">@color/glass_card_dark</item>
         <item name="colorOnSurface">@color/text_on_glass_dark</item>
     </style>
 
     <!-- Glass App Theme (for activities) -->
-    <style name="Theme.VodouLauncher.Glass.App" parent="Theme.VodouLauncher.Glass">
-        <item name="android:windowAnimationStyle">@style/Animation.VodouLauncher.Glass</item>
+    <style name="Theme.4GAuteauOS.Glass.App" parent="Theme.4GAuteauOS.Glass">
+        <item name="android:windowAnimationStyle">@style/Animation.4GAuteauOS.Glass</item>
     </style>
 
     <!-- Glass Animations -->
-    <style name="Animation.VodouLauncher.Glass" parent="@android:style/Animation">
+    <style name="Animation.4GAuteauOS.Glass" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/glass_fade_in</item>
         <item name="android:windowExitAnimation">@anim/glass_fade_out</item>
         <item name="android:activityOpenEnterAnimation">@anim/glass_slide_in_right</item>
@@ -125,7 +125,7 @@
     </style>
 
     <!-- Light Glass Theme -->
-    <style name="Theme.VodouLauncher.Glass.Light" parent="Theme.VodouLauncher.Glass">
+    <style name="Theme.4GAuteauOS.Glass.Light" parent="Theme.4GAuteauOS.Glass">
         <item name="colorSurface">@color/glass_light_surface_translucent</item>
         <item name="colorOnSurface">@color/text_on_glass_light</item>
         <item name="android:textColor">@color/text_on_glass_light</item>
@@ -134,7 +134,7 @@
     </style>
 
     <!-- Cyan Accent Theme -->
-    <style name="Theme.VodouLauncher.Glass.Cyan" parent="Theme.VodouLauncher.Glass">
+    <style name="Theme.4GAuteauOS.Glass.Cyan" parent="Theme.4GAuteauOS.Glass">
         <item name="colorPrimary">@color/futuristic_cyan</item>
         <item name="colorPrimaryVariant">@color/futuristic_cyan_light</item>
         <item name="colorSecondary">@color/futuristic_teal</item>
@@ -142,7 +142,7 @@
     </style>
 
     <!-- Purple Accent Theme -->
-    <style name="Theme.VodouLauncher.Glass.Purple" parent="Theme.VodouLauncher.Glass">
+    <style name="Theme.4GAuteauOS.Glass.Purple" parent="Theme.4GAuteauOS.Glass">
         <item name="colorPrimary">@color/futuristic_purple</item>
         <item name="colorSecondary">@color/futuristic_cyan</item>
         <item name="android:windowBackground">@drawable/glass_background_purple</item>
