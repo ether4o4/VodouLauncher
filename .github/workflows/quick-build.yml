@@ -1,0 +1,102 @@
+name: Quick Build & Notify
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  build-and-notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+    
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    
+    - name: Build APK
+      run: |
+        echo "🚀 Starting VodouLauncher build..."
+        ./gradlew assembleDebug --no-daemon
+        echo "✅ Build complete!"
+    
+    - name: Find APK file
+      id: find_apk
+      run: |
+        APK_FILE=$(find app/build/outputs/apk -name "*.apk" -type f | head -1)
+        if [ -f "$APK_FILE" ]; then
+          APK_NAME=$(basename "$APK_FILE")
+          APK_SIZE=$(stat -f%z "$APK_FILE" 2>/dev/null || stat -c%s "$APK_FILE")
+          APK_SIZE_MB=$(echo "scale=2; $APK_SIZE / 1024 / 1024" | bc)
+          echo "APK_NAME=$APK_NAME" >> $GITHUB_OUTPUT
+          echo "APK_SIZE=$APK_SIZE_MB" >> $GITHUB_OUTPUT
+          echo "APK_PATH=$APK_FILE" >> $GITHUB_OUTPUT
+          echo "✅ Found APK: $APK_NAME (${APK_SIZE_MB}MB)"
+        else
+          echo "❌ No APK file found!"
+          find app/build -type f -name "*.apk" 2>/dev/null || echo "No APK files in build directory"
+          exit 1
+        fi
+    
+    - name: Upload APK as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: vodoulauncher-apk
+        path: ${{ steps.find_apk.outputs.APK_PATH }}
+        retention-days: 7
+    
+    - name: Create direct download info
+      id: download_info
+      run: |
+        echo "## 🎉 VodouLauncher APK Ready!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Build Details:**" >> $GITHUB_STEP_SUMMARY
+        echo "- APK: \`${{ steps.find_apk.outputs.APK_NAME }}\`" >> $GITHUB_STEP_SUMMARY
+        echo "- Size: ${{ steps.find_apk.outputs.APK_SIZE }} MB" >> $GITHUB_STEP_SUMMARY
+        echo "- Build: #${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**📥 Download Links:**" >> $GITHUB_STEP_SUMMARY
+        echo "1. [Direct Download from GitHub Actions](https://github.com/ether4o4/VodouLauncher/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }})" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**📱 Installation:**" >> $GITHUB_STEP_SUMMARY
+        echo "1. Download the APK file" >> $GITHUB_STEP_SUMMARY
+        echo "2. On Android, enable \"Install from unknown sources\"" >> $GITHUB_STEP_SUMMARY
+        echo "3. Open the downloaded APK file" >> $GITHUB_STEP_SUMMARY
+        echo "4. Install and set as default launcher" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**✨ Features:**" >> $GITHUB_STEP_SUMMARY
+        echo "- Vista-evolved glass UI" >> $GITHUB_STEP_SUMMARY
+        echo "- Performance optimized" >> $GITHUB_STEP_SUMMARY
+        echo "- Modern Android launcher" >> $GITHUB_STEP_SUMMARY
+        echo "- GitHub Copilot ready" >> $GITHUB_STEP_SUMMARY
+    
+    - name: Output download URL
+      run: |
+        echo "=========================================="
+        echo "🚀 VODOU LAUNCHER APK READY FOR DOWNLOAD!"
+        echo "=========================================="
+        echo ""
+        echo "📱 APK: ${{ steps.find_apk.outputs.APK_NAME }}"
+        echo "📦 Size: ${{ steps.find_apk.outputs.APK_SIZE }} MB"
+        echo ""
+        echo "🔗 DOWNLOAD LINK:"
+        echo "https://github.com/ether4o4/VodouLauncher/suites/${{ github.run_id }}/artifacts/${{ github.run_attempt }}"
+        echo ""
+        echo "📝 To download:"
+        echo "1. Click the link above"
+        echo "2. Click on 'vodoulauncher-apk'"
+        echo "3. Download the APK file"
+        echo "4. Install on Android device"
+        echo ""
+        echo "✨ Features: Vista-evolved glass UI, performance optimized"
+        echo "=========================================="
