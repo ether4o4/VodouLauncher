@@ -142,7 +142,7 @@ class FileManagerFragment : Fragment() {
                 detailFileName.text = file.name
                 detailFilePath.text = file.path
                 detailFileSize.text = file.formattedSize
-                detailLastModified.text = file.lastModified
+                detailLastModified.text = file.lastModifiedFormatted
                 emptyDetailHint.visibility = View.GONE
             } else {
                 emptyDetailHint.visibility = View.VISIBLE
