@@ -1,103 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="80dp"
-    android:layout_height="96dp"
-    android:background="@drawable/vista_icon_background"
-    android:clickable="true"
-    android:focusable="true"
-    android:padding="4dp">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="96dp"
+    android:layout_height="112dp"
+    android:padding="6dp">
 
-    <!-- Icon Container -->
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:id="@+id/icon_container"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="4dp"
-        app:cardBackgroundColor="@color/vista_icon_background"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <!-- Icon Image -->
         <ImageView
             android:id="@+id/icon_image"
             android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            tools:src="@drawable/ic_vista_app_default" />
+            android:layout_height="48dp" />
 
-        <!-- Selection Glow -->
-        <View
-            android:id="@+id/icon_selection"
+        <TextView
+            android:id="@+id/icon_label"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/vista_icon_selection"
-            android:visibility="gone" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/vista_text_primary"
+            android:textSize="12sp" />
+    </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    <View
+        android:id="@+id/icon_selection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vista_focus_glow"
+        android:visibility="gone" />
 
-    <!-- Icon Label -->
-    <TextView
-        android:id="@+id/icon_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:maxLines="2"
-        android:paddingTop="4dp"
-        android:text="App Name"
-        android:textAppearance="@style/TextAppearance.4GAuteauOS.Vista.IconLabel"
-        android:textColor="@color/vista_text_primary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon_container" />
-
-    <!-- Running Indicator -->
     <View
         android:id="@+id/running_indicator"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/vista_running_indicator"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/icon_container"
-        app:layout_constraintTop_toTopOf="@+id/icon_container" />
+        android:layout_width="24dp"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/vista_evolved_blue"
+        android:visibility="gone" />
 
-    <!-- Notification Badge -->
     <TextView
         android:id="@+id/notification_badge"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp"
-        android:background="@drawable/vista_notification_badge"
+        android:layout_gravity="top|end"
         android:gravity="center"
-        android:text="3"
-        android:textAppearance="@style/TextAppearance.4GAuteauOS.Vista.Badge"
-        android:textColor="@color/vista_text_primary"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@+id/icon_container"
-        app:layout_constraintTop_toTopOf="@+id/icon_container" />
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
 
-    <!-- Context Menu Button -->
     <ImageButton
         android:id="@+id/context_menu_button"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/vista_icon_button"
-        android:scaleType="center"
-        android:src="@drawable/ic_vista_context_menu"
-        android:tint="@color/vista_icon_secondary"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/icon_container"
-        app:layout_constraintTop_toTopOf="@+id/icon_container" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="bottom|end"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_menu_more" />
+</FrameLayout>

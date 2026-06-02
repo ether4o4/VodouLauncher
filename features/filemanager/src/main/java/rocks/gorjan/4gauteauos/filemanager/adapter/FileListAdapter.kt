@@ -1,11 +1,11 @@
-package rocks.gorjan.4gauteauos.filemanager.adapter
+package rocks.gorjan.fourgauteauos.filemanager.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import rocks.gorjan.4gauteauos.filemanager.model.FileItem
+import rocks.gorjan.fourgauteauos.filemanager.model.FileItem
 
 /**
  * FileListAdapter — RecyclerView adapter for the file manager's master pane.

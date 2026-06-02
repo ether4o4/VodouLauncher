@@ -164,4 +164,6 @@
     <string name="cheers">Cheers!</string>
     <string name="notification_bar">Notification bar</string>
     <string name="private_space">Private space</string>
+    <string name="start_menu">Start menu</string>
+    <string name="settings">Settings</string>
 </resources>

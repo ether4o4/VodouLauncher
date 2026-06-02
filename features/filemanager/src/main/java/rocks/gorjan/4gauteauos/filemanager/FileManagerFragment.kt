@@ -1,4 +1,4 @@
-package rocks.gorjan.4gauteauos.filemanager
+package rocks.gorjan.fourgauteauos.filemanager
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import rocks.gorjan.4gauteauos.filemanager.adapter.FileListAdapter
-import rocks.gorjan.4gauteauos.filemanager.viewmodel.FileManagerViewModel
+import rocks.gorjan.fourgauteauos.filemanager.adapter.FileListAdapter
+import rocks.gorjan.fourgauteauos.filemanager.viewmodel.FileManagerViewModel
 
 /**
  * FileManagerFragment — Double-Pane Master-Detail File Explorer

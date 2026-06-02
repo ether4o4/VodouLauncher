@@ -1,4 +1,4 @@
-package rocks.gorjan.4gauteauos.filemanager.viewmodel
+package rocks.gorjan.fourgauteauos.filemanager.viewmodel
 
 import android.os.Environment
 import androidx.lifecycle.LiveData
@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import rocks.gorjan.4gauteauos.filemanager.model.FileItem
+import rocks.gorjan.fourgauteauos.filemanager.model.FileItem
 import java.io.File
 
 /**

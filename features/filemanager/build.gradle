@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'rocks.gorjan.4gauteauos.filemanager'
+    namespace 'rocks.gorjan.fourgauteauos.filemanager'
     compileSdk 34
 
     defaultConfig {

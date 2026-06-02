@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace 'com.fourgauteau.os.core'
     compileSdk 35
 
     compileOptions {

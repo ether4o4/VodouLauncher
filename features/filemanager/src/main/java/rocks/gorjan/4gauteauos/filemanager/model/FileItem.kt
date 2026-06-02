@@ -1,4 +1,4 @@
-package rocks.gorjan.4gauteauos.filemanager.model
+package rocks.gorjan.fourgauteauos.filemanager.model
 
 import java.io.File
 import java.text.SimpleDateFormat

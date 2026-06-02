@@ -61,6 +61,7 @@
     <color name="vista_icon_primary">#CCFFFFFF</color>
     <color name="vista_icon_secondary">#80FFFFFF</color>
     <color name="vista_icon_accent">#FF0078D7</color>
+    <color name="vista_icon_background">#331A1A1A</color>
     
     <!-- Vista Surface Colors -->
     <color name="vista_surface_dark">#801A1A1A</color>
@@ -97,6 +98,7 @@
     <color name="vista_start_menu">#801A1A1A</color>
     <color name="vista_start_menu_item">#331A1A1A</color>
     <color name="vista_start_menu_item_hover">#4D1A1A1A</color>
+    <color name="vista_notification">#CC1A1A1A</color>
     
     <!-- Vista Transparency Levels (HD Optimized) -->
     <color name="vista_transparent_05">#0D1A1A1A</color>
