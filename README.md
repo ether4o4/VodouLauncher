@@ -3,8 +3,8 @@
 A minimalist Android launcher based on Olauncher, customized for VodouLaCroix.
 
 ## 📥 Download Latest APK
-**[Download Latest APK](https://github.com/ether4o4/4GAuteauOS/releases/latest/download/app-debug.apk)**
-*(Automatically built and updated on every push)*
+**[Download Latest APK](https://github.com/ether4o4/4GAuteauOS/releases/latest/download/app-hdpiX86-debug.apk)**
+*(~32 MB · debug-signed · enable "Install unknown apps", then open the APK)*
 
 ## Features
 - Minimalist design
