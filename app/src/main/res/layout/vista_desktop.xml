@@ -141,4 +141,46 @@
             android:textColor="@color/vista_text_primary"
             android:textColorHint="@color/vista_text_secondary" />
     </androidx.cardview.widget.CardView>
+
+    <!-- NeverSoft Services boot splash (fades out shortly after launch) -->
+    <LinearLayout
+        android:id="@+id/neversoft_splash"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/neversoft_splash_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/neversoft_splash_badge"
+            android:gravity="center"
+            android:text="N"
+            android:textColor="@color/vista_uhd_white"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:letterSpacing="0.04"
+            android:text="NeverSoft Services"
+            android:textColor="@color/vista_text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/neversoft_splash_bar" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

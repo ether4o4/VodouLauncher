@@ -43,6 +43,19 @@ class VistaLauncherActivity : AppCompatActivity() {
             toggleSearchBar()
             true
         }
+
+        dismissSplash()
+    }
+
+    private fun dismissSplash() {
+        val splash = binding.neversoftSplash
+        splash.postDelayed({
+            splash.animate()
+                .alpha(0f)
+                .setDuration(400)
+                .withEndAction { splash.visibility = View.GONE }
+                .start()
+        }, 900)
     }
 
     private fun defaultApps(): List<VistaApp> = listOf(
