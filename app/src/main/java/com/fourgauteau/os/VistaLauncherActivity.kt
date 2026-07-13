@@ -1,9 +1,13 @@
 package com.fourgauteau.os
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.webkit.JavascriptInterface
+import android.webkit.WebView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,6 +46,42 @@ class VistaLauncherActivity : AppCompatActivity() {
         binding.root.setOnLongClickListener {
             toggleSearchBar()
             true
+        }
+
+        showSplash()
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private fun showSplash() {
+        val splash: WebView = binding.neversoftSplash
+        splash.settings.javaScriptEnabled = true
+        splash.setBackgroundColor(Color.BLACK)
+        splash.isVerticalScrollBarEnabled = false
+        splash.isHorizontalScrollBarEnabled = false
+        splash.addJavascriptInterface(SplashBridge(), "AndroidSplash")
+        splash.loadUrl("file:///android_asset/neversoft_splash.html")
+        // Robust fallback: fade the splash out even if the page never signals done.
+        splash.postDelayed({ dismissSplash() }, 2900L)
+    }
+
+    private fun dismissSplash() {
+        val splash: WebView = binding.neversoftSplash
+        if (splash.visibility != View.VISIBLE) return
+        splash.animate()
+            .alpha(0f)
+            .setDuration(400)
+            .withEndAction {
+                splash.visibility = View.GONE
+                splash.loadUrl("about:blank")
+            }
+            .start()
+    }
+
+    /** Bridge so the splash page can call window.AndroidSplash.done() (or __neverSoftSplashDone). */
+    private inner class SplashBridge {
+        @JavascriptInterface
+        fun done() {
+            runOnUiThread { dismissSplash() }
         }
     }
 
